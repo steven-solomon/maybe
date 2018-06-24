@@ -4,7 +4,7 @@ Welcome to a very simple implementation of maybe in ruby. There aren't new types
 
 ## Installation
 
-Until, I get more feedback, I'm not doing a formal release. For now, point to the github repo in your Gemfile.
+Until I get more feedback, I'm not doing a formal release. For now point to the github repo in your Gemfile.
 
 ```ruby
 # Gemfile
@@ -31,7 +31,6 @@ class Thing
 end
 
 Thing.new.maybe { |t| puts t.message }.else { puts "I don't" }
-
 # outputs "I worked"
   
 nil.maybe { puts "I worked" }.else { puts "I don't" }
