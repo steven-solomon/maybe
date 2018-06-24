@@ -25,7 +25,13 @@ There is also and `:else` method for handling `nil`.
 
 Examples:
 ```ruby
-Object.new.maybe { puts "I worked" }.else { puts "I don't" }
+class Thing 
+  def message
+    "I worked"
+  end
+end
+
+Thing.new.maybe { |t| puts t.message }.else { puts "I don't" }
 
 # outputs "I worked"
   
