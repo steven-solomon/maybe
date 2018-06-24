@@ -35,7 +35,7 @@ RSpec.describe Object do
       expect(call_count).to eq(0)
     end
 
-    it 'returns value of maybe block from else' do
+    it 'returns value of maybe block from maybe/else chain' do
       result = 6.maybe { 7 }.else { 8 }
 
       expect(result).to eq(7)
