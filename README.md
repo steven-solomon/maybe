@@ -4,19 +4,16 @@ Welcome to a very simple implementation of maybe in ruby. There aren't new types
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Until, I get more feedback, I'm not doing a formal release. For now, point to the github repo in your Gemfile.
 
 ```ruby
-gem 'maybe'
+# Gemfile
+gem 'maybe', git: 'git@github.com:steven-solomon/maybe.git'
 ```
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install maybe
 
 ## Usage
 
@@ -39,6 +36,10 @@ nil.maybe { puts "I worked" }.else { puts "I don't" }
 # outputs "I don't"
 ```
 
+## Feedback
+
+If you have any problems, please don't hesitate to open an issue. Feedback is welcome.
+ 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
