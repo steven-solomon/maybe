@@ -10,14 +10,22 @@ class NilClass
   end
 end
 
-class Object
-  def maybe
-    yield self
-
-    self
+class Else
+  def initialize(value)
+    @value = value
   end
 
   def else
-    self
+    @value
+  end
+end
+
+def Maybe(value)
+  Else.new(value)
+end
+
+class Object
+  def maybe
+    Maybe(yield self)
   end
 end

@@ -22,27 +22,15 @@ RSpec.describe Object do
     end
 
     it 'returns self' do
-      instance = AnyObject.new
-
-      expect(instance.maybe {}).to eq(instance)
+      expect(AnyObject.new.maybe {}).to be_a(Else)
     end
   end
 
   describe '#else' do
-    it 'does not call block' do
-      call_count = 0
+    it 'returns value of maybe block from else' do
+      result = 6.maybe { 7 }.else { 8 }
 
-      AnyObject.new.else do
-        call_count += 1
-      end
-
-      expect(call_count).to eq(0)
-    end
-
-    it 'returns self' do
-      instance = AnyObject.new
-
-      expect(instance.else {}).to eq(instance)
+      expect(result).to eq(7)
     end
   end
 end
