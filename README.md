@@ -22,6 +22,8 @@ There is also and `:else` method for handling `nil`.
 
 Examples:
 ```ruby
+require 'maybe'
+
 class Thing 
   def message
     "I worked"
