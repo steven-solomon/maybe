@@ -27,6 +27,14 @@ RSpec.describe Object do
   end
 
   describe '#else' do
+    it 'does not call block' do
+      call_count = 0
+
+      6.maybe { }.else { call_count += 1 }
+
+      expect(call_count).to eq(0)
+    end
+
     it 'returns value of maybe block from else' do
       result = 6.maybe { 7 }.else { 8 }
 
