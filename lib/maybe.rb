@@ -20,12 +20,8 @@ class Else
   end
 end
 
-def Maybe(value)
-  Else.new(value)
-end
-
 class Object
   def maybe
-    Maybe(yield self)
+    Else.new(yield self)
   end
 end
