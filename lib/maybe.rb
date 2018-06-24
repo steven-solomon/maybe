@@ -12,7 +12,7 @@ end
 
 class Object
   def maybe
-    yield
+    yield self
 
     self
   end

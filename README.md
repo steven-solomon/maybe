@@ -31,7 +31,6 @@ Object.new.maybe { puts "I worked" }.else { puts "I don't" }
   
 nil.maybe { puts "I worked" }.else { puts "I don't" }
 # outputs "I don't"
- 
 ```
 
 ## Development

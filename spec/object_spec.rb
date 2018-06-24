@@ -13,6 +13,14 @@ RSpec.describe Object do
       expect(call_count).to eq(1)
     end
 
+    it 'passes self into the block' do
+      instance = AnyObject.new
+
+      instance.maybe do |param|
+        expect(param).to eq(instance)
+      end
+    end
+
     it 'returns self' do
       instance = AnyObject.new
 
